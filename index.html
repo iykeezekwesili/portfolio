@@ -1,0 +1,224 @@
+<!DOCTYPE html">
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iyke's portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=asap&display=swap" rel="Stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/aos.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <script src="js/jQuery-3.4.1.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/fontawesome-all.js" type="text/javascript"></script>
+
+    <style type="text/css">
+       .red{
+            transform: translateY(50px);
+            opacity: 0;
+            transition: 1s;
+         }
+    </style>
+
+    <script type="text/javascript">
+        window.addEventListener("DOMContentLoaded", function () {
+
+            var reds = document.querySelectorAll(".red")
+            //var h1 = document.querySelector("h1")
+
+            var media = window.matchMedia("(max-width:400px)")
+            var offset = 150
+            if (media.matches) {
+                offset = 50
+            }
+
+            document.onscroll = function () {
+                reds.forEach(function (red) {
+                    var scrolltop = Math.ceil(window.pageYOffset)
+                    var elemtop = Math.ceil(red.offsetTop)
+                    //h1.textContent = scrolltop + ", " + elemtop
+
+                    if (elemtop <= scrolltop + (window.innerHeight - offset)) {
+                        red.style.transform = "translateY(0px)"
+                        red.style.opacity = 1
+                    } else {
+                        if (!red.classList.contains("once")) {
+                            red.style.transform = "translateY(50px)"
+                            red.style.opacity = 0
+                        }
+                    }
+                })
+            }
+        })
+    </script>
+</head>
+
+
+<body>
+   <div class="banner">
+      <div class="header move-bg">
+         <h1>I AM IYKE EZEKWESILI</h1>
+         <cite>Coder, Developer, Teacher, Mentor</cite>
+         <p class="social">
+            <i class="fab fa-facebook-square p-1"></i>
+            <i class="fab fa-whatsapp-square p-1"></i>
+            <i class="fab fa-facebook-messenger p-1"></i>
+         </p>
+      </div>
+      <div class="me"><img src="images/me.jpg" /></div>
+   </div>
+
+
+   <div>
+       <div class="first d-flex justify-content-between">
+            <div class="red">
+              <span class="firsticons">
+              <i class="fas fa-laptop-code fa-3x pb-2"></i>
+              <h4 class="pb-3">Programmer</h4>
+              </span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+              et dolore magna aliqua.    Blandit volutpat maecenas volutpat blandit.</p>
+            </div>
+
+            <div class="red">
+              <span class="firsticons">
+              <i class="fas fa-globe fa-3x pb-2"></i>
+              <h4 class="pb-3">Web Developer</h4>
+              </span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+              ut labore et dolore magna aliqua. Blandit volutpat maecenas volutpat blandit. sed do eiusmod tempor incididunt 
+              ut labore et dolore magna aliqua. Blandit volutpat maecenas volutpat blandit  Blandit volutpat maecenas volutpat blandit.</p>
+            </div>
+
+            <div class="red">
+              <span class="firsticons">
+              <i class="fas fa-chalkboard-teacher fa-3x pb-2"></i>
+              <h4 class="pb-3">Teacher/Mentor</h4>
+              </span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+              ut labore et dolore magna aliqua. Blandit volutpat maecenas volutpat blandit.</p>
+            </div>
+       </div>
+   </div>
+
+
+   <div class="second text-center red">
+      <span class="aboutmeicon firsticons">
+      <i class="fas fa-user-tie fa-3x"></i>
+      <h3 class="mb-5 mt-3">About me</h3>
+      </span>
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit volutpat maecenas volutpat blandit. Vulputate odio ut enim blandit volutpat.At erat pellentesque adipiscing commodo elit at imperdiet.
+       Scelerisque eu ultrices vitae auctor eu augue. Mi sit amet mauris commodo. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Mauris vitae ultricies leo integer. Lectus urna duis convallis convallis tellus id interdum velit laoreet. 
+      </p>
+   </div>
+   
+   <div class="about-section">
+      <div class="red">
+         <h5 class="firsticons">My passion</h5>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed risus turpis. Proin quis tellus vitae orci bibendum vehicula ut vitae nibh. In rutrum luctus posuere. Maecenas sagittis mauris sem, ac tincidunt neque consectetur a.</p>
+      </div>
+      <div class="red">
+         <h5 class="firsticons">My Hobbies</h5>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed risus turpis. Proin quis tellus vitae orci bibendum vehicula ut vitae nibh. In rutrum luctus posuere.</p>
+      </div>
+      <div class="red">
+         <h5 class="firsticons">At my leisure </h5>
+         <p>
+         	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed risus turpis. Proin quis tellus vitae orci bibendum vehicula ut vitae nibh.
+         </p>
+      </div>
+   </div>
+
+
+   <h3 class="text-center mt-5 red">My Projects</h3>
+   <div class="project">
+        <div class="red">
+            <img src="images/wst-1.jpg" />
+            <div class="links">
+               <p>Lorem ipsum dolor</p>
+               <a href="javascript:void(0)" target="_blank">Visit website</a>
+            </div>
+        </div>
+        <div class="red">
+            <img src="images/wst-2.jpg" />
+            <div class="links">
+               <p>Lorem ipsum dolor sit amet</p>
+               <a href="javascript:void(0)" target="_blank">Visit website</a>
+            </div>
+        </div>
+        <div class="red">
+            <img src="images/wst-3.jpg" />
+            <div class="links">
+               <p>Lorem ipsum dolor sit</p>
+               <a href="javascript:void(0)" target="_blank">Visit website</a>
+            </div>
+        </div>
+        <div class="red">
+            <img src="images/wst-4.jpg" />
+            <div class="links">
+               <p>Lorem ipsum dolor sit amet, consectetur</p>
+               <a href="javascript:void(0)" target="_blank">Visit website</a>
+            </div>
+        </div>
+   </div>
+
+   
+
+   <div class="contact">
+      <div class="text-center red">
+         <span class="firsticons">
+             <i class="fas fa-envelope fa-4x"></i>
+             <h5 class="mb-4 mt-2">Contact me</h5>
+         </span>
+         <p>
+            At erat pellentesque adipiscing commodo elit at imperdiet. Scelerisque eu ultrices vitae auctor eu augue. Mi sit amet mauris commodo. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Mauris vitae ultricies leo integer. Lectus urna duis convallis convallis tellus id interdum velit laoreet.
+         </p>
+
+          <div class="text-cente fa-2x mb-4">
+             <i class="fab fa-facebook-square"></i>
+             <i class="fab fa-twitter-square"></i>
+             <i class="fab fa-whatsapp-square"></i>
+             <i class="fab fa-facebook-messenger"></i>
+             <i class="fab fa-instagram"></i>
+          </div>
+      </div>
+
+      <div></div>
+
+      <div class="message red">
+        <form>
+            <p>
+                <label>Name:</label><input type="text" class="form-control" required placeholder="Name" />
+            </p>
+            <p>
+                <label>Email:</label><input type="email" class="form-control" required placeholder="Email" />
+            </p>
+            <p>
+                <label></label><textarea rows="5" class="form-control" required placeholder="Message"></textarea>
+            </p>
+            <p>
+                <label></label>
+                <button type="submit"><i class="fas fa-paper-plane"></i><span class="pl-2">Send message</span></button>
+            </p>
+        </form>
+      </div>
+   </div>
+
+    
+
+   <div class="footer">
+      <div class="text-cente">
+         <i class="fab fa-facebook-square"></i>
+         <i class="fab fa-twitter-square"></i>
+         <i class="fab fa-whatsapp-square"></i>
+         <i class="fab fa-facebook-messenger"></i>
+         <i class="fab fa-instagram"></i>
+      </div>
+
+      <div class="pt-3"><cite>Designed by: Iyke Ezekwesili</cite></div>
+   </div>
+
+    <script src="js/index.js" type="text/javascript"></script>
+
+</body>
+</html>
