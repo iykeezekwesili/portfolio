@@ -1,0 +1,446 @@
+﻿*{
+    box-sizing: border-box;
+    font-family: 'Asap', sans-serif;
+    font-weight: 400;
+}
+        
+body{
+    background: #fff;
+}
+        
+.banner{
+    background: linear-gradient(rgba(0,83,83,0.5), rgba(0,83,83,0.5)), url(../images/bg-banner-3.jpg);
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    background-size: cover;
+    height: 60%;
+    position: relative;
+    transition: 3s;
+}
+        
+.move-bg{
+    background-position: 0% 10%;
+}
+        
+.me{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid lavender;
+    position: absolute;
+    bottom: -90%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    opacity: 0;
+    transition: 1s;
+}
+        
+.fademeIn{
+    opacity: 1;
+}
+        
+.me img{
+    width: 100%;
+}
+        
+.banner .header{
+    position: relative;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto;
+    width: 95%;
+    color: #fff;
+    top: 20%;
+    font-family: Courier New, Monospace;
+}
+        
+.header h1{
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    font-size: 3em;
+}
+        
+.header cite{
+    font-size: 1.5em;
+    margin-top: 15px;
+    display: inline-block;
+    font-weight: 100;
+}
+        
+.social{
+    margin-top: 20px;
+    font-size: 40px;
+    color: cyan;
+}
+        
+.first{
+    background: lavender;
+    padding:150px 100px;
+    text-align: center;
+}
+        
+.first > div{
+    width: 32%;
+    padding: 20px 5px 10px 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #888;
+}
+        
+.firsticons{
+    color: #FE6102;
+}
+        
+.link{
+    text-align: center;
+    padding-top: 30px;
+}
+        
+.about-section{
+    display: flex; 
+    justify-content: space-between; 
+    padding: 0px 100px;
+    background: #35496A;
+}
+        
+.about-section > div{
+    width: 30%;
+    padding: 50px 0px;
+    color: #92A8C9;
+}
+            
+.second{
+    background: #fff;
+    border-radius: 5px;
+    padding: 40px 30px 40px 30px;
+    margin: -80px 100px auto 100px;
+}
+        
+.project{
+    padding: 40px 100px 70px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+        
+.project > div{
+    width: 24%;
+    overflow: hidden; 
+    position: relative; 
+    border-radius:10px;
+    border: 1px solid #eee;
+}
+                
+.project img{
+    width: 100%;
+}
+        
+.project .links{
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    top: 80%; 
+    background: rgba(00,50,50,0.8);
+    transition: 0.2s;
+    text-align: center;
+    font-weight:200;
+}
+        
+.project > div:hover .links{
+    top: 0%;
+    padding-top: 10px;
+}
+        
+.project .links p{
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 30%;
+}
+        
+.project .links a{
+    color: #000;
+    text-align: center;
+    display: inline-block;
+    background: orange;
+    padding: 5px;
+    border-radius: 3px;
+    width: 80%;
+    text-decoration: none;
+}
+        
+.contact{
+    background: #394551;
+    color: #B0BCC8;
+    display: flex;
+    padding: 0px 100px;
+}
+        
+.contact > div{
+    width: 45%;
+    padding: 50px 10px;
+}
+
+.contact > div:nth-child(2){
+    width: 10%;
+}
+        
+.message > p{
+    display: flex;
+    align-items: flex-start;
+}
+        
+.message label{
+    width: 12%;
+}
+
+.message input, .message textarea{
+    width: 88%;
+    margin: 0;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    transition: 0.5s;
+}
+
+.message button{
+    border: none;
+    padding: 5px 20px;
+    width: 44%;
+    background: orange;
+    border-radius: 5px;
+}
+
+form{
+    width: 100%;
+    margin: 0px auto;
+}
+        
+.footer{
+    padding: 15px;
+    background: #171b1f;
+    color: teal;
+    text-align: center;
+}
+        
+        
+/**
+    TABLET DEVICE
+**/
+@media screen and (max-width: 768px){
+    .banner{
+        height: 78%;
+    }
+        
+    .social{
+        margin-top: 5px;
+        font-size: 35px;
+        color: cyan;
+    }
+            
+    .me{
+        width: 120px;
+        height: 120px;
+        top: 370px;
+        left: 50%;
+        transform: translate(-50%, -150%);
+    }
+        
+    .banner .header{
+        padding: 20px 5px;
+        top: 5%;
+    }
+        
+    .header h1{
+        font-size: 1.7em;
+        font-weight: 700;
+    }
+        
+    .header cite{
+        font-size: 1em;
+    }
+            
+    .first > div{
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 10px;
+        padding: 25px 5px 10px 5px;
+    }
+}
+        
+        
+/**
+    MOBILE LANDSCAPE DEVICE / TABLET PORTRAIT
+**/
+@media screen and (max-width: 576px){
+    .banner{
+        height: 75%;
+    }
+        
+    .social{
+        margin-top: 5px;
+        font-size: 35px;
+        color: cyan;
+    }
+            
+    .me{
+        width: 120px;
+        height: 120px;
+        bottom: -200%;
+        left: 50%;
+        transform: translate(-50%, -150%);
+    }
+        
+    .banner .header{
+        padding: 20px 5px;
+        top: 5%;
+    }
+        
+    .header h1{
+        font-size: 1.7em;
+        font-weight: 700;
+    }
+        
+    .header cite{
+        font-size: 1em;
+    }
+            
+    .first{
+        padding: 100px 15px;
+        flex-direction: column;
+    }
+            
+    .first > div{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 25px 5px 10px 5px;
+    }
+        
+    .about-section{
+        display: table; 
+        margin:20px 0px;
+        padding: 40px 15px;
+        width: 100%;
+    }
+        
+    .about-section > div{
+        width: 100%;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        padding: 0px;
+        text-align: center;
+    }
+            
+    .second{
+        margin: -50 15px auto 15px;
+        background: #fff;
+    }
+            
+    .project{
+        padding: 20px;
+        padding: 40px 5px;
+    }
+            
+    .project > div{
+        width: 48%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+        
+    .contact{
+        flex-direction: column;
+        padding: 40px 10px;
+    }
+        
+    .contact > div{
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact > div:nth-child(2){
+        display: none;
+    }
+
+    .contact > div:nth-child(3){
+        margin-top: 20px;
+    }
+    
+    form{
+        padding:0px 50px;
+    }
+}
+        
+@media screen and (max-width: 340px){
+    .banner{
+        height: 60%;
+        background-position: center;
+        border-bottom: 3px solid cyan;
+    }
+        
+    .social{
+        margin-top: 10px;
+        font-size: 35px;
+        color: cyan;
+    }
+            
+    .me{
+        width: 130px;
+        height: 130px;
+        top: 400px;
+        left: 50%;
+        transform: translate(-50%, -150%);
+        border: 3px solid cyan;
+    }
+        
+    .banner .header{
+        font-weight: 100;
+        padding: 20px 5px;
+        top: 10%;
+    }
+        
+    .header h1{
+        font-size: 1.3em;
+    }
+            
+    .first{
+        flex-direction: column;
+        margin:0px auto;
+        padding: 100px 15px 40px 15px;
+    }
+            
+    .first > div{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 25px 5px 10px 5px;
+    }
+            
+    .second{
+        margin: auto 15px auto 15px;
+        padding: 40px 0px 0px 0px;
+        text-align: left;
+    }
+            
+    .project{
+        padding: 20px 3px;
+    }
+            
+    .project > div{
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+        
+    .message label{
+        display: none;
+    }
+        
+    .message input, .message textarea, .message button{
+        width: 100%;
+    }
+    
+    form{
+        padding:0px 10px;
+    }
+}
