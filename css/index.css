@@ -13,7 +13,7 @@ body{
     background-repeat: no-repeat;
     background-position: 0% 100%;
     background-size: cover;
-    height: 60%;
+    height: 75%;
     position: relative;
     transition: 3s;
 }
@@ -207,8 +207,8 @@ body{
 
 .message button{
     border: none;
-    padding: 5px 20px;
-    width: 44%;
+    padding: 10px 0px;
+    width: 60%;
     background: orange;
     border-radius: 5px;
 }
@@ -223,6 +223,125 @@ form{
     background: #171b1f;
     color: teal;
     text-align: center;
+}
+         
+.testimony{
+    padding: 20px 0px 50px 0px;
+    background: #0094B2;
+}
+    
+.testimony h3{
+    text-align: center;
+    font-size: 1.8em;
+    color: #004857;
+    padding: 20px 0px 60px 0px;
+}
+         
+.testimony .slides{
+    display: flex;
+    /**width: 2400px;**/
+    flex-wrap: no-wrap;
+    margin-left: 0px;
+    transitio: 1s;
+}
+         
+.testimony .slide{
+    padding: 0px 250px;
+}
+         
+.testimony .slide img{
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+         
+.testimony .slide .name{
+    padding: 20px;
+    font-weight: bold;
+}
+         
+.testimony .slide, .testimony .gallery{
+    width: 900px;
+}
+         
+.testimony .gallery{
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.gallery{
+    color: white;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+      
+.gallery, .slide{
+    width: 600px;
+}
+       
+.gallery .slider{
+    display: flex;
+    flex-wrap: no-wrap;
+    margin-left: 0;
+}
+      
+.slide{
+    padding: 50px 100px;
+}
+
+.slide .client-info p{
+    margin: 0;
+    padding: 0;
+    color: #BDF3FF;
+}
+
+.slide .msg .fas{
+    
+}
+
+.client-info > p:nth-child(1){
+    font-weight: 600;
+    font-size: 1.3em;
+    padding-top: 15px;
+}
+
+.client-info > p:nth-child(2){
+    font-size: 1em;
+    padding-bottom: 30px;
+}
+
+.slide .msg{
+    font-style: italic;
+}
+      
+#next, #prev{
+    position: absolute;
+    margin: 0;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    height: 70px;
+    width: 70px;
+    top: 50%;
+    font-size: 1.5em;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+#next:hover, #prev:hover{
+    background: rgba(0,0,0,0.8);
+    transform: rotate(360deg);
+}
+      
+#prev{
+    right: 10px;
+}
+      
+#next{
+    left: 10px;
 }
         
         
@@ -346,7 +465,7 @@ form{
     .project > div{
         width: 48%;
         height: auto;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
         
     .contact{
@@ -442,5 +561,59 @@ form{
     
     form{
         padding:0px 10px;
+    }
+    
+    .testimony h3{
+        font-size: 1.3em;
+        padding: 20px 0px 20px 0px;
+    }
+    
+    .testimony .slide{
+        padding: 0px 0px 0px !important;
+    }
+         
+    .testimony .slide, .testimony .gallery{
+        width: 300px !important;
+    }
+         
+    .brand img{
+        width: 50% !important;
+    }
+    
+    .gallery{
+    	padding: 0;
+    }
+   
+    .gallery, .slide{
+    	width: 320px;
+    	text-align: center;
+    }
+  
+    .slide{
+    	padding: 30px 30px;
+    }
+   
+    #next, #prev{
+    	border: none;
+    	width: 40px;
+    	height: 40px;
+    }
+
+    #next:hover, #prev:hover{
+        background: rgba(0,0,0,0.5);
+        transform: rotate(0deg);
+    }
+   
+    #next{
+    	left: 0px;
+    }
+   
+    #prev{
+    	right: 0px;
+    }
+   
+    .client-info > p:nth-child(2){
+        font-size: 0.8em;
+        padding-bottom: 25px;
     }
 }
