@@ -4,6 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Iyke's portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=asap&display=swap" rel="Stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/aos.css" rel="stylesheet" type="text/css" />
@@ -18,44 +19,6 @@
             transform: translateY(50px);
             opacity: 0;
             transition: 1s;
-         }
-         
-         menu{
-             margin: 0;
-             padding: 0 100px;
-         }
-         
-         menu:hover{
-             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-         }
-         
-         menu span a{
-             display: block;
-             float: left;
-             text-decoration: none;
-             padding: 10px 30px;
-             color: #fff;
-             border-radius: 2px;
-             transition: 0.3s;
-         }
-         
-         menu span a:hover{
-             text-decoration: none;
-             color: #ccc;
-             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
-         }
-         
-         menu div{
-             float:right; 
-             padding:10px 0px; 
-         }
-         
-         menu div a{
-             color: #FE6102;
-         }
-         
-         menu div a:hover{
-             color: #FD8740;
          }
          
          .brand h3{
@@ -123,7 +86,7 @@
             insertQuote()
             function insertQuote() {
                 var msgs = document.querySelectorAll(".slide .msg")
-                msgs.forEach(function(msg) {
+                msgs.forEach(function (msg) {
                     var span = document.createElement("span")
 
                     msg.insertAdjacentHTML("afterbegin", "<i class='fas fa-quote-left mr-3 fa-2x text-warning'></i>")
@@ -175,6 +138,42 @@
             gallery.addEventListener("mouseover", function (e) {
                 if (e != undefined) clearInterval(interval)
             })
+
+
+
+            var togggleMenu = document.querySelector("#togggleMenu")
+            var overlay = document.querySelector(".mobile-overlay")
+            var menu = document.querySelector("menu")
+            
+            togggleMenu.addEventListener("click", function(){
+            	if(menu.getAttribute("data-hide") == "hide"){
+            		menu.style.left = "0%"
+            		overlay.style.display = "block"
+            		document.body.style.overflow = "hidden"
+          		  	menu.setAttribute("data-hide", "show")
+          		  	
+          		  	setTimeout(function(){
+          		  		overlay.style.background = "rgba(0,0,0,0.7)"
+          		  	}, 0)
+            	} else {
+            		hideMenu()
+            	}
+            })
+           
+            overlay.addEventListener("click", function(){
+            	hideMenu()
+            })
+           
+            function hideMenu(){
+            	menu.style.left = "-100%"
+            	overlay.style.background = "rgba(0,0,0,0)"
+            	menu.setAttribute("data-hide", "hide")
+            	document.body.style.overflow = "auto"
+            	
+            	setTimeout(function(){
+            		overlay.style.display = "none"
+            	}, 300)
+            }
         })
     </script>
 </head>
@@ -182,7 +181,8 @@
 
 <body>
    <div class="banner">
-        <menu class="clearfix d-none">
+        <div class="mobile-overlay"></div>
+        <menu class="clearfix" data-hide="hide">
             <span>
             <a href="#">Home</a>
             <a href="#about">About</a>
@@ -197,6 +197,10 @@
                 <a href="#"><i class="fab fa-twitter-square ml-3"></i></a>
             </div>
         </menu>
+        <div class="logo">
+            <span><img src="images/logo-1.png" /> Iyke Ezekwesili</span>
+            <span id="togggleMenu"><i class="fas fa-bars"></i></span>
+        </div>
 
         <div class="header move-bg">
             <div><img src="images/logo-1.png" width="80px" height="80px" /></div>
@@ -208,7 +212,7 @@
    </div>
 
 
-   <div>
+   
        <div class="first d-flex justify-content-between">
             <div class="scrollappear">
               <span class="firsticons">
@@ -238,13 +242,13 @@
               ut labore et dolore magna aliqua. Blandit volutpat maecenas volutpat blandit.</p>
             </div>
        </div>
-   </div>
+   
 
 
    <div class="second text-center scrollappear" id="about">
       <span class="aboutmeicon firsticons">
       <i class="fas fa-user-tie fa-3x"></i>
-      <h3 class="mb-5 mt-3">About me</h3>
+      <h3 class="my-3">About me</h3>
       </span>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit volutpat maecenas volutpat blandit. Vulputate odio ut enim blandit volutpat.At erat pellentesque adipiscing commodo elit at imperdiet.
        Scelerisque eu ultrices vitae auctor eu augue. Mi sit amet mauris commodo. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Mauris vitae ultricies leo integer. Lectus urna duis convallis convallis tellus id interdum velit laoreet. 
