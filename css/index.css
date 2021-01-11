@@ -279,10 +279,9 @@ form{
          
 .testimony .slides{
     display: flex;
-    /**width: 2400px;**/
     flex-wrap: no-wrap;
     margin-left: 0px;
-    transitio: 1s;
+    transitio: 0.5s;
 }
          
 .testimony .slide{
@@ -290,6 +289,8 @@ form{
 }
          
 .testimony .slide img{
+	width: 100px;
+	height: 100px;
     border-radius: 50%;
     border: 1px solid #ccc;
 }
@@ -752,6 +753,10 @@ form{
    
     #prev{
     	right: 0px;
+    }
+   
+    #next, #prev{
+    	top: 25%;
     }
    
     .client-info > p:nth-child(2){
