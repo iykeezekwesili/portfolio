@@ -1,4 +1,4 @@
-﻿*{
+*{
     box-sizing: border-box;
     font-family: 'Asap', sans-serif;
     font-weight: 400;
@@ -67,6 +67,46 @@ body{
     margin-top: 15px;
     display: inline-block;
     font-weight: 100;
+}
+         
+menu{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+         
+menu a{
+    display: block;
+    float: left;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #fff;
+    outline: none;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+menu span a:hover{
+	background: rgba(0,0,0,0.7);
+	text-decoration: none;
+	color: #eee;
+}
+         
+menu > div{
+    float: right;
+}
+         
+menu > div a{
+    padding: 10px 5px;
+    color: orange;
+}
+         
+menu > div a:last-child{
+    padding-right: 20px;
+}
+
+.logo{
+    display: none;
 }
         
 .social{
@@ -207,8 +247,8 @@ body{
 
 .message button{
     border: none;
-    padding: 10px 0px;
-    width: 60%;
+    padding: 5px 20px;
+    width: 44%;
     background: orange;
     border-radius: 5px;
 }
@@ -496,6 +536,7 @@ form{
         height: 60%;
         background-position: center;
         border-bottom: 3px solid cyan;
+        margin-top: 45px;
     }
         
     .social{
@@ -505,8 +546,8 @@ form{
     }
             
     .me{
-        width: 130px;
-        height: 130px;
+        width: 100px;
+        height: 100px;
         top: 400px;
         left: 50%;
         transform: translate(-50%, -150%);
@@ -526,13 +567,14 @@ form{
     .first{
         flex-direction: column;
         margin:0px auto;
-        padding: 100px 15px 40px 15px;
+        padding: 100px 15px 20px 15px;
     }
             
     .first > div{
         width: 100%;
         margin-bottom: 10px;
         padding: 25px 5px 10px 5px;
+        margin-bottom: 20px;
     }
             
     .second{
@@ -540,7 +582,84 @@ form{
         padding: 40px 0px 0px 0px;
         text-align: left;
     }
-            
+    
+    .mobile-overlay{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.0);
+        display: none;
+        z-index: 1010;
+        transition: 0.3s;
+    }
+    
+    menu{
+        background: teal;
+        position: fixed;
+        width: 80%;
+        height: 100%;
+        z-index: 1010;
+        left: -100%;
+        top: 0;
+        display: none;
+        padding-top: 60px;
+        transition-duration: 0.3s;
+    }
+    
+    menu a{
+        float: none;
+        padding: 10px;
+        color: #fff;
+        font-size: 1.2em;
+    }
+    
+    menu span a:hover{
+        background: rgba(0,0,0,0.7);
+        text-decoration: none;
+        color: #eee;
+    }
+    
+    menu > div{
+        float: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    menu > div a{
+        padding: 10px 5px;
+        color: orange;
+        float: none;
+        display: inline;
+        font-size: 2em;
+    }
+    
+    menu > div a:last-child{
+        padding-right: 20px;
+    }
+    
+    .logo{
+        position: fixed;
+        left: 0px;
+        top: 0;
+        display: block;
+        z-index: 1010;
+        width: 100vw;
+        padding: 10px;
+        background: black;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+    }
+    
+    .logo img{
+        width: 10%;
+    }
+    
+    .logo span:nth-child(2){
+        padding: 5px;
+    }
+    
     .project{
         padding: 20px 3px;
     }
@@ -569,15 +688,15 @@ form{
     }
     
     .testimony .slide{
-        padding: 0px 0px 0px !important;
+        padding: 0px 0px 0px;
     }
          
     .testimony .slide, .testimony .gallery{
-        width: 300px !important;
+        width: 300px;
     }
          
     .brand img{
-        width: 50% !important;
+        width: 80%;
     }
     
     .gallery{
