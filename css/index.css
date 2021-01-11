@@ -248,7 +248,7 @@ menu > div a:last-child{
 .message button{
     border: none;
     padding: 5px 20px;
-    width: 44%;
+    width: 60%;
     background: orange;
     border-radius: 5px;
 }
@@ -308,6 +308,20 @@ form{
     text-align: center;
     overflow: hidden;
 }
+
+.brand{
+	padding: 40px 100px;
+}
+         
+    .brand img{
+        width: 10%;
+        /*height: 40px;*/
+    }
+   
+    .brand h3{
+    	text-align: center;
+    	padding-bottom: 50px;
+    }
 
 .gallery{
     color: white;
@@ -602,7 +616,6 @@ form{
         z-index: 1010;
         left: -100%;
         top: 0;
-        display: none;
         padding-top: 60px;
         transition-duration: 0.3s;
     }
@@ -696,7 +709,17 @@ form{
     }
          
     .brand img{
-        width: 80%;
+        width: 40px;
+        height: 40px;
+    }
+   
+    .brand{
+    	padding: 30px 10px;
+    }
+   
+    .brand h3{
+    	text-align: center;
+    	padding-bottom: 20px;
     }
     
     .gallery{
