@@ -135,39 +135,39 @@
             var togggleMenu = document.querySelector("#togggleMenu")
             var overlay = document.querySelector(".mobile-overlay")
             var menu = document.querySelector("menu")
-            
-            togggleMenu.addEventListener("click", function(){
-            	if(menu.getAttribute("data-hide") == "hide"){
-            		openMenu()
-            	} else {
-            		closeMenu()
-            	}
+
+            togggleMenu.addEventListener("click", function () {
+                if (menu.getAttribute("data-hide") == "hide") {
+                    openMenu()
+                } else {
+                    closeMenu()
+                }
             })
-           
-            overlay.addEventListener("click", function(){
-            	closeMenu()
+
+            overlay.addEventListener("click", function () {
+                closeMenu()
             })
-           
-            function closeMenu(){
-            	menu.style.left = "-100%"
-            	overlay.style.background = "rgba(0,0,0,0)"
-            	menu.setAttribute("data-hide", "hide")
-            	document.body.style.overflow = "auto"
-            	
-            	setTimeout(function(){
-            		overlay.style.display = "none"
-            	}, 300)
+
+            function closeMenu() {
+                menu.style.left = "-100%"
+                overlay.style.background = "rgba(0,0,0,0)"
+                menu.setAttribute("data-hide", "hide")
+                document.body.style.overflow = "auto"
+
+                setTimeout(function () {
+                    overlay.style.display = "none"
+                }, 300)
             }
-           
-            function openMenu(){
-            	menu.style.left = "0%"
-            	overlay.style.display = "block"
-            	document.body.style.overflow = "hidden"
-            	menu.setAttribute("data-hide", "show")
-            	
-            	setTimeout(function(){
-            		overlay.style.background = "rgba(0,0,0,0.7)"
-            	}, 0)
+
+            function openMenu() {
+                menu.style.left = "0%"
+                overlay.style.display = "block"
+                document.body.style.overflow = "hidden"
+                menu.setAttribute("data-hide", "show")
+
+                setTimeout(function () {
+                    overlay.style.background = "rgba(0,0,0,0.7)"
+                }, 0)
             }
         })
     </script>
@@ -179,13 +179,14 @@
         <div class="mobile-overlay"></div>
         <menu class="clearfix" data-hide="hide">
             <span>
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#project">Projects</a>
-            <a href="#contact">Contact</a>
-            <a href="#">Link-4</a>
-            <a href="#">Link-5</a></span>
-            <div class="">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#project">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Link-4</a>
+                <a href="#">Link-5</a>
+            </span>
+            <div>
                 <a href="#"><i class="fab fa-facebook-square"></i></a>
                 <a href="#"><i class="fab fa-whatsapp-square ml-3"></i></a>
                 <a href="#"><i class="fab fa-facebook-messenger ml-3"></i></a>
@@ -193,15 +194,14 @@
             </div>
         </menu>
         <div class="logo">
-            <span><img src="images/logo-1.png" /> Iyke Ezekwesili</span>
+            <span><img src="images/logo-1.png" /> Iyke Ezekwesili Portfolio</span>
             <span id="togggleMenu"><i class="fas fa-bars"></i></span>
         </div>
 
         <div class="header move-bg">
-            <div><img src="images/logo-1.png" width="80px" height="80px" /></div>
+            <div><img src="images/logo-1.png" /></div>
             <h1>I AM IYKE EZEKWESILI</h1>
             <cite>Coder, Developer, Teacher, Mentor</cite>
-         
         </div>
         <div class="me"><img src="images/me.jpg" /></div>
    </div>
