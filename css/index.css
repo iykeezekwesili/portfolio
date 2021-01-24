@@ -450,7 +450,7 @@ form{
 **/
 @media screen and (max-width: 576px){
     .banner{
-        height: 75%;
+        height: 80%;
     }
         
     .social{
@@ -458,10 +458,15 @@ form{
         font-size: 35px;
         color: cyan;
     }
+    
+    menu > span a{
+        font-size: 0.8em;
+        padding: 10px;
+    }
             
     .me{
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
         bottom: -200%;
         left: 50%;
         transform: translate(-50%, -150%);
@@ -469,16 +474,22 @@ form{
         
     .banner .header{
         padding: 20px 5px;
-        top: 5%;
+        top: 4%;
     }
         
     .header h1{
-        font-size: 1.7em;
-        font-weight: 700;
+        font-size: 1.3em;
+        font-weight: 300;
+        letter-spacing: 2px;
     }
         
     .header cite{
         font-size: 1em;
+    }
+    
+    .header img{
+        width: 50px;
+        height: 50px;
     }
             
     .first{
@@ -544,8 +555,47 @@ form{
     form{
         padding:0px 50px;
     }
+    
+    .testimony h3{
+        font-size: 1.3em;
+        padding: 20px 0px 20px 0px;
+    }
+    
+    .testimony .slide{
+        padding: 0px 0px 0px;
+    }
+         
+    .testimony .slide, .testimony .gallery{
+        width: 500px;
+    }
+   
+    #next, #prev{
+    	border: none;
+    	width: 50px;
+    	height: 50px;
+    }
+
+    #next:hover, #prev:hover{
+        background: rgba(0,0,0,0.5);
+        transform: rotate(0deg);
+    }
+   
+    #next{
+    	left: 0px;
+    }
+   
+    #prev{
+    	right: 0px;
+    }
+   
+    #next, #prev{
+    	top: 25%;
+    }
 }
         
+/*****************************************************************************************
+  MOBILE PHONE - PORTRAIT
+*****************************************************************************************/
 @media screen and (max-width: 340px){
     .banner{
         height: 60%;
@@ -561,8 +611,8 @@ form{
     }
             
     .me{
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         top: 400px;
         left: 50%;
         transform: translate(-50%, -150%);
@@ -577,6 +627,10 @@ form{
         
     .header h1{
         font-size: 1.3em;
+    }
+    
+    menu > span a{
+        font-size: 1em;
     }
             
     .first{
@@ -618,6 +672,7 @@ form{
         left: -100%;
         top: 0;
         padding-top: 60px;
+        text-align: center;
         transition-duration: 0.3s;
     }
     
@@ -668,6 +723,10 @@ form{
     
     .logo img{
         width: 10%;
+    }
+    
+    .logo span:nth-child(1){
+        font-size: 0.8em;
     }
     
     .logo span:nth-child(2){
